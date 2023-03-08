@@ -1,6 +1,6 @@
 ## Overview ##
 
-This tool creates an executable file that establishes a reverse shell connection to a specified IP address and port. The builder.py script takes three arguments from the command line: the IP address, port number, and the filename for the output executable. It then obfuscate the modified file using <b>@acheong08</b> tool called py-obfuscate [compress.py] before creating and executable file that fits the currentused system. The generated executable file is built using PyInstaller.
+This tool creates an executable file that establishes a reverse shell connection to a specified IP address and port. The builder.py script takes three arguments from the command line: the IP address, port number, and the filename for the output executable. It then obfuscate the modified file using <b>@acheong08</b> tool called py-obfuscate [compress.py] before creating an executable file that fits the current used system. The generated executable file is built using PyInstaller.
 
 The generated executable file connects to a hardcoded IP address and port number and awaits commands from the attacker. The RevShell.py file is the code that will be executed on the victim's machine once the attacker has successfully established a connection. The code within RevShell.py is an obfuscated reverse shell that allows the attacker to execute commands on the victim's machine.
 
