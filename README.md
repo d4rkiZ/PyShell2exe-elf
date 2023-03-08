@@ -6,7 +6,7 @@ The generated executable file connects to a hardcoded IP address and port number
 
 ## Usage ##
 
-<b>#Important!#</b1>
+<b>#Important!#</b>
 * Use the builder script at the same system as the target machine , build on linux for linux targets, build on windows for windows targets
 
 * Clone the repository or download the code.
