@@ -44,6 +44,7 @@ pip install pyinstaller
 # The dependencies listed above are standard Python libraries and should be included with any Python distribution #
 
 Before running the builder.py script, make sure that all required tools and dependencies are installed and accessible from the command line.
+And Again use the builder script at the same system as the target machine , build on linux for linux targets, build on windows for windows targets.
 
 ## Disclaimer ##
 This tool is provided for educational purposes only. Misuse of this tool to gain unauthorized access to computer systems is strictly prohibited. The author assumes no liability for any damages caused by the use or misuse of this tool.
