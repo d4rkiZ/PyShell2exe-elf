@@ -23,7 +23,7 @@ Note that the IP address and port number used in the builder.py script and the R
 Python 3
 PyInstaller
 
-#Dependencies#
+# Dependencies #
 
 socket
 subprocess
