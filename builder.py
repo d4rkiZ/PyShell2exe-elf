@@ -33,3 +33,11 @@ if __name__ == '__main__':
     
     # Build the executable file using PyInstaller
     build_exe(filename)
+
+    # Remove unnecessary files	
+    cmd = f"rm -rf {filename}.spec"
+    subprocess.call(cmd, shell=True)
+    cmd = f"rm -rf {filename}"
+    subprocess.call(cmd, shell=True)
+
+ 
