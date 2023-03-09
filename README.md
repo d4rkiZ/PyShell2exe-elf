@@ -31,21 +31,21 @@ Note that the IP address and port number used in the builder.py script and the R
 
 # Tools #
 
-Python 3
-PyInstaller 
+* Python 3
+* PyInstaller 
 
 # Dependencies #
 
-socket
-subprocess
-os
-base64
+* socket
+* subprocess
+* os
+* base64
 
 ## To install PyInstaller, run the following command ##
 
-bash
-Copy code
-pip install pyinstaller
+* bash
+* Copy code
+* pip install pyinstaller
 
 # The dependencies listed above are standard Python libraries and should be included with any Python distribution #
 
