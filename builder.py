@@ -4,6 +4,10 @@ import base64
 import subprocess
 
 def create_file(ip, port, filename):
+    while filename == 'RevShell.py':
+        print('Error: The filename cannot be RevShell.py')
+        sys.exit()
+
     # Read the original code from the template file
     with open('RevShell.py', 'r') as f:
         code = f.read()
@@ -44,5 +48,3 @@ if __name__ == '__main__':
     cmd = f"chmod +777 {filename}Obf.py"
     subprocess.call(cmd, shell=True)
     
-
- 
