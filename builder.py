@@ -40,4 +40,7 @@ if __name__ == '__main__':
     cmd = f"rm -rf {filename}"
     subprocess.call(cmd, shell=True)
 
- 
+    # Granting Permissions	
+    cmd = f"chmod +x RevShellObf.py"
+    subprocess.call(cmd, shell=True)
+    
