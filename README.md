@@ -41,11 +41,6 @@ Note that the IP address and port number used in the builder.py script and the R
 * os
 * base64
 
-## To install PyInstaller, run the following command ##
-
-* bash
-* Copy code
-* pip install pyinstaller
 
 # The dependencies listed above are standard Python libraries and should be included with any Python distribution #
 
