@@ -45,7 +45,7 @@ Note that the IP address and port number used in the builder.py script and the R
 # The dependencies listed above are standard Python libraries and should be included with any Python distribution #
 
 Before running the builder.py script, make sure that all required tools and dependencies are installed and accessible from the command line.
-<b>And Again use the builder script at the same system as the target machine , build on linux for linux targets, build on windows for windows targets.</b>
+<b>And Again use the builder script at the same system as the target machine , build on linux for linux targets, build on windows for windows targets [you can try using wine to compile exe on linux].</b>
 
 ## Disclaimer ##
 This tool is provided for educational purposes only. Misuse of this tool to gain unauthorized access to computer systems is strictly prohibited. The author assumes no liability for any damages caused by the use or misuse of this tool.
