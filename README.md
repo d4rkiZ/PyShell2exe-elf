@@ -16,7 +16,7 @@ The generated executable file connects to a hardcoded IP address and port number
 * Clone the repository or download the code.
 * Navigate to the directory that contains the builder.py script.
 
-* Run the following command [filename must be different then RevShell.py]:
+* Run the following command [If you want the script to generate a bat file using your preferred input payload in the startup directory, you have the option of renaming RevShellWithStartup.py to RevShell.py.]:
 <b>python3 builder.py IP PORT OutputFileName</b> 
 Once the script has finished executing, the generated executable file will be located at dist in the same directory as the builder.py script.
 
