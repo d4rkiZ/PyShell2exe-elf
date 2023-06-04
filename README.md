@@ -37,6 +37,8 @@ Note that the IP address and port number used in the builder.py script and the R
 # Dependencies #
 
 * socket
+* cryptography
+* pystyle
 * subprocess
 * os
 * base64
