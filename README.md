@@ -15,6 +15,8 @@ The generated executable file connects to a hardcoded IP address and port number
 
 * Clone the repository or download the code.
 * Navigate to the directory that contains the builder.py script.
+* pip install -r requirements.txt
+* pip install pyinstaller [make sure it is in your path after it has been installed]
 
 * Run the following command [If you want the script to generate a bat file using your preferred input payload in the startup directory, you have the option of renaming RevShellWithStartup.py to RevShell.py.]:
 <b>python3 builder.py IP PORT OutputFileName</b> 
